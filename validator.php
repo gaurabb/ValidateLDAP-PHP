@@ -43,7 +43,7 @@ class SafeLdap
 	/**
 	* ValidateInputForSafeLdapQuery
 	* 	takes in the ldap quer string to validate for ldap insecure characters
-	* 	default validation id performed for alphanumeric characters only.
+	* 	default validation is performed for alphanumeric characters only.
 	* 	allows the caller to pass in additional characters that needs to be 
 	* 	whitelisted for a particular query as needed
 	*
