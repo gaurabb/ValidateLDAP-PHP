@@ -1,5 +1,5 @@
-safeldap - validation library - LDAP query input does no contain insecure characters
-====================================================================================
+safeldap - PHP LDAP validation library 
+========================================
 
 The library contains three methods:
 - ValidateInputForSafeLdapQuery
