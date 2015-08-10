@@ -42,14 +42,14 @@ class SafeLdap
 	
 	/**
 	* ValidateInputForSafeLdapQuery
-	* 	takes in the ldap quer string to validate for ldap insecure characters
+	* 	takes ldap querystring as input and validate that it contains only ldap-safe characters
 	* 	default validation is performed for alphanumeric characters only.
 	* 	allows the caller to pass in additional characters that needs to be 
 	* 	whitelisted for a particular query as needed
 	*
 	* Parameters:
 	* 	inputToValidate - the ldap parameter query to validate
-	*	whiteList - additional characters to be whitelisted for a particular call		
+	*	whiteList - additional characters to be whitelisted for a particular call; default is empty		
 	*/
 	function ValidateInputForSafeLdapQuery($inputToValidate, $whiteList='')
 	{
@@ -57,7 +57,7 @@ class SafeLdap
 		$SafeLdap = new SafeLdap;
 		if(strlen($inputToValidate)===0)
 		{
-			print "Function validateInput called without any input to validate! Returned False => Nothing to check!";			
+			print "Function validateInput invoked without any input to validate! Returned False => Nothing to check!";			
 			return false;			
 		}
 		else
@@ -74,8 +74,6 @@ class SafeLdap
 			}			
 		}
 		return false;
-	}
-	
-	
+	}	
 }
 ?>
